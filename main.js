@@ -32,10 +32,7 @@ const forEach = (array, cb) => {
     cb(array[i]);
   }
 };
-const d = forEach(letters, addS);
-console.log(d);
-
-//5
+//5 foreachle map kullanımı
 const mapWith = (array, cb) => {
   const mappedArray = [];
   forEach(array, (e1) => mappedArray.push(cb(e1)));
@@ -43,6 +40,25 @@ const mapWith = (array, cb) => {
 };
 const e = mapWith(letters, addS);
 console.log(e);
+//6 reduce fonksiyonu kullanımı
+const reduce = (array, callback, initialValue) => {
+  let acc = initialValue;
+  for (let i = 0; i < array.length; i++) {
+    acc = callback(acc, array[i]);
+  }
+  return acc;
+};
+const arrayDeneme1 = [1, 2, 3, 4, 5];
+const add = (a, b) => a + b;
+const f = reduce(arrayDeneme1, add, 10);
+console.log(f);
+//7 
+const intersection = (arrays) => {
+  return arrays.reduce((acc, curr) => {
+    return curr.filter(el => acc.includes(el));
+  });
+};
+
 
 /* function outer() {
   let counter = 0;
