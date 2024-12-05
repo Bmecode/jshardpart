@@ -16,10 +16,11 @@ console.log(deneme1);
 //FOREACH AÇILIMI geri değer döndürmez herzaman undefined döner
 const forEach = (array, cb) => {
   for (let i = 0; i < array.length; i++) {
-    cb(array[i]);
+    console.log(cb(array[i]));
   }
 };
 //bu tanımlamaya bakarak foreachin mapin yaptığı işlevin aynısını yaptığını sadece değer döndürmediğini görebiliriz.
+
 //foreachle map ikisinin aynı anda kullanımı
 const mapforEach = (array, cb) => {
   const mapArray = [];
@@ -29,9 +30,11 @@ const mapforEach = (array, cb) => {
 const deneme2 = mapforEach(array1, (x) => x * 2);
 console.log(deneme2);
 //  <---------------------------------------------------------------------------------------->
-//REDUCE
+//REDUCE kullanımı
 let init = 1000;
-const deneme3 = array1.reduce((acc, cur) => {acc + cur}, init); //reduce fonksiyonu ilk başta bir biriktirici değişken 2. aşamada mevcut değer ve son aşamada başlangıç değeri istiyor isteğe bağlı boş bırakılabilir.
+const deneme3 = array1.reduce((acc, curr) => {
+  return acc + curr;
+}); //reduce fonksiyonu ilk başta bir biriktirici değişken 2. aşamada mevcut değer ve son aşamada başlangıç değeri istiyor isteğe bağlı boş bırakılabilir.
 console.log(deneme3);
 
 /* //6 reduce fonksiyonu kullanımı

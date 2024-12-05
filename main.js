@@ -52,13 +52,12 @@ const arrayDeneme1 = [1, 2, 3, 4, 5];
 const add = (a, b) => a + b;
 const f = reduce(arrayDeneme1, add, 10);
 console.log(f);
-//7 
+//7
 const intersection = (arrays) => {
   return arrays.reduce((acc, curr) => {
-    return curr.filter(el => acc.includes(el));
+    return curr.filter((el) => acc.includes(el));
   });
 };
-
 
 /* function outer() {
   let counter = 0;
@@ -77,3 +76,20 @@ deneme2();
 deneme2();
 deneme2(); */
 //Closurelarda ki backpackler sayesinde bağımsız kendi değerlerini saklayan farklı fonksiyonlar oluşturabiliyoruz. arkaplanda bu işlevler kendi execution contextinde counterları 0 olarak tanımlandığı için farklı değerleri tutabiliyor.
+
+//map foreach try 
+/* const mapTry = (array, cb) => {
+  mapData = [];
+  for (let i = 0; i < array.length; i++) {
+    mapData.push(cb(array[i]));
+  }
+  return mapData;
+};
+const array5 = [1, 2, 3, 4, 5, 11];
+const denemeFunc = (x) => x + 2;
+const result = mapTry(array5, denemeFunc);
+console.log(result);
+const result2 = array5.map((x) => x * 5);
+const result3 = array5.forEach((x) => console.log(x * 10));
+console.log(result2);
+ */
