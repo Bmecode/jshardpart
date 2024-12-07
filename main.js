@@ -55,9 +55,15 @@ console.log(f);
 //7
 const intersection = (arrays) => {
   return arrays.reduce((acc, curr) => {
-    return curr.filter((el) => acc.includes(el));
+    return curr.filter((e) => acc.includes(e));
   });
 };
+const sonuc = intersection([
+  [1, 2, 3],
+  [2, 3, 4],
+  [3, 4, 5],
+]);
+console.log(sonuc);
 
 /* function outer() {
   let counter = 0;
@@ -77,7 +83,7 @@ deneme2();
 deneme2(); */
 //Closurelarda ki backpackler sayesinde bağımsız kendi değerlerini saklayan farklı fonksiyonlar oluşturabiliyoruz. arkaplanda bu işlevler kendi execution contextinde counterları 0 olarak tanımlandığı için farklı değerleri tutabiliyor.
 
-//map foreach try 
+//map foreach try
 /* const mapTry = (array, cb) => {
   mapData = [];
   for (let i = 0; i < array.length; i++) {

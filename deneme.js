@@ -34,10 +34,10 @@ console.log(deneme2);
 let init = 1000;
 const deneme3 = array1.reduce((acc, curr) => {
   return acc + curr;
-}); //reduce fonksiyonu ilk başta bir biriktirici değişken 2. aşamada mevcut değer ve son aşamada başlangıç değeri istiyor isteğe bağlı boş bırakılabilir.
+}, init); //reduce fonksiyonu ilk başta bir biriktirici değişken 2. aşamada mevcut değer ve son aşamada başlangıç değeri istiyor isteğe bağlı boş bırakılabilir.
 console.log(deneme3);
 
-/* //6 reduce fonksiyonu kullanımı
+//reduce fonksiyonu kullanımı
 const reduce = (array, callback, initialValue) => {
     let acc = initialValue;
     for (let i = 0; i < array.length; i++) {
@@ -49,4 +49,3 @@ const reduce = (array, callback, initialValue) => {
   const add = (a, b) => a + b;
   const f = reduce(arrayDeneme1, add, 10);
   console.log(f);
- */
